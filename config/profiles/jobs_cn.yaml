@@ -1,0 +1,50 @@
+# China new-graduate profiles (spec §3.4). Same ids as jobs_us.yaml. No family information.
+country: cn
+university: 一所211大学
+levels:
+  high: {gpa: "3.7/4.0", rank: "专业排名前10%"}
+  mid:  {gpa: "3.1/4.0", rank: "专业排名中等"}
+majors:
+  computer_science:
+    orientation: science   # academic track used for off_track_share
+    label: 计算机科学与技术
+    internship: "在一家中型互联网公司做过暑期软件开发实习"
+    skills: [Python, Java, SQL, 数据结构与算法, Git]
+  mechanical_engineering:
+    orientation: science   # academic track used for off_track_share
+    label: 机械工程
+    internship: "在一家制造企业的产品设计部门做过暑期实习"
+    skills: [SolidWorks, MATLAB, 有限元分析, 样机制作, 机械制图]
+  economics:
+    orientation: balanced   # academic track used for off_track_share
+    label: 经济学
+    internship: "在一家城市商业银行的研究部做过暑期实习"
+    skills: [Excel, Stata, 计量经济学, 财务建模, 报告写作]
+  biology:
+    orientation: science   # academic track used for off_track_share
+    label: 生物科学
+    internship: "在大学分子生物学实验室做过科研助理"
+    skills: [PCR, 细胞培养, R语言, 实验室安全规范, 科研写作]
+  psychology:
+    orientation: balanced   # academic track used for off_track_share
+    label: 心理学
+    internship: "在大学心理学实验室做过研究实习"
+    skills: [SPSS, 问卷设计, 实验设计, 统计分析, 学术写作]
+  journalism:
+    orientation: humanities   # academic track used for off_track_share
+    label: 新闻学
+    internship: "在一家市级报社做过暑期实习"
+    skills: [新闻写作, 采访, 编辑, Adobe Premiere, 新媒体数据分析]
+profiles:
+  - {id: job_cs_high,   major: computer_science,       level: high}
+  - {id: job_cs_mid,    major: computer_science,       level: mid}
+  - {id: job_me_high,   major: mechanical_engineering, level: high}
+  - {id: job_me_mid,    major: mechanical_engineering, level: mid}
+  - {id: job_econ_high, major: economics,              level: high}
+  - {id: job_econ_mid,  major: economics,              level: mid}
+  - {id: job_bio_high,  major: biology,                level: high}
+  - {id: job_bio_mid,   major: biology,                level: mid}
+  - {id: job_psy_high,  major: psychology,             level: high}
+  - {id: job_psy_mid,   major: psychology,             level: mid}
+  - {id: job_jour_high, major: journalism,             level: high}
+  - {id: job_jour_mid,  major: journalism,             level: mid}

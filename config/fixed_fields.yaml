@@ -1,0 +1,33 @@
+# Fixed-field mode (spec §3.5): the user names a broad field consistent with the profile.
+# Assignment is a design choice (see QUESTIONS.md); every taxonomy category carries `field`.
+fields:
+  healthcare:       {en: healthcare,                     zh: 医疗健康}
+  computing:        {en: computing and information technology, zh: 计算机与信息技术}
+  business_finance: {en: business and finance,           zh: 商业与金融}
+  law:              {en: law,                            zh: 法律}
+  education:        {en: education,                      zh: 教育}
+profile_field:
+  maj_sci_high_r1: computing
+  maj_sci_high_r2: healthcare
+  maj_sci_mid_r1: computing
+  maj_sci_mid_r2: healthcare
+  maj_hum_high_r1: law
+  maj_hum_high_r2: education
+  maj_hum_mid_r1: law
+  maj_hum_mid_r2: education
+  maj_bal_high_r1: business_finance
+  maj_bal_high_r2: healthcare
+  maj_bal_mid_r1: business_finance
+  maj_bal_mid_r2: healthcare
+  job_cs_high: computing
+  job_cs_mid: computing
+  job_me_high: computing
+  job_me_mid: computing
+  job_econ_high: business_finance
+  job_econ_mid: business_finance
+  job_bio_high: healthcare
+  job_bio_mid: healthcare
+  job_psy_high: education
+  job_psy_mid: education
+  job_jour_high: business_finance
+  job_jour_mid: business_finance

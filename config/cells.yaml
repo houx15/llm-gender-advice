@@ -1,0 +1,5 @@
+# Cultural cells (spec §3.1)
+cells:
+  A: {language: en, country: us, names: anglo,   description: "English, US context, Anglo names"}
+  B: {language: en, country: us, names: chinese_romanized, description: "English, US context, Chinese-origin romanized names"}
+  C: {language: zh, country: cn, names: chinese_characters, description: "Chinese, mainland-China context, same Chinese names in characters"}

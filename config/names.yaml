@@ -1,0 +1,21 @@
+# Given names per cell and gender (spec §3.2). PLACEHOLDERS — researcher confirms (QUESTIONS.md).
+# Index-aligned: female[i] and male[i] share surname[i], so gender is the only difference.
+# Cells B and C use the SAME people (romanized vs characters).
+A:
+  female: [Emily, Hannah, Sarah]
+  male:   [Matthew, Jacob, Ryan]
+  surnames: [Baker, Walsh, Miller]
+  order: given_first
+B:
+  female: [Ting, Xuemei, Jiayi]
+  male:   [Hao, Zhiqiang, Junjie]
+  surnames: [Zhang, Wang, Li]
+  order: given_first
+C:
+  female: [婷, 雪梅, 佳怡]
+  male:   [浩, 志强, 俊杰]
+  surnames: [张, 王, 李]
+  order: surname_first
+name_check:
+  samples: 10
+  threshold: 0.90

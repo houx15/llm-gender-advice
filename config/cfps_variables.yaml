@@ -1,0 +1,14 @@
+# CFPS variable mapping (spec §7) — researcher fills. Never commit CFPS data.
+wave: TODO                 # e.g. 2020
+files:
+  adult: TODO              # file name inside cfps_dir
+weights:
+  cross_section: TODO      # survey weight variable
+variables:
+  sex: TODO
+  sex_female_value: TODO
+  birth_year: TODO
+  highest_degree: TODO
+  hs_track: TODO           # 文科/理科 (or 3+1+2 首选) variable
+  college_major: TODO      # field-of-study variable or code
+major_code_to_taxonomy: {} # CFPS major code -> taxonomy id (config/taxonomy/majors.csv)

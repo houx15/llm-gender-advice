@@ -1,0 +1,15 @@
+You are coding answers from a study of career and education advice. Below is an advice response (in English or Chinese) that recommends {{ unit_plural }} to a user, and a fixed list of categories.
+
+Task: extract the ranked recommendations in the order the response gives them (at most {{ max_items }}), and map each one to exactly ONE category id from the list. If none fits, use "other". Do not infer recommendations that are not stated. If the response refuses or gives no recommendations, return an empty list.
+
+Categories (id: English label / Chinese label):
+{% for c in categories -%}
+{{ c.id }}: {{ c.label_en }} / {{ c.label_zh }}
+{% endfor %}
+Response:
+<<<
+{{ response }}
+>>>
+
+Return only JSON of this form:
+{"recommendations": [{"rank": 1, "raw_text": "<the recommendation as written>", "category_id": "<id or other>", "confidence": <0.0-1.0>}]}

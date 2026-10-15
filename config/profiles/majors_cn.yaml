@@ -1,0 +1,52 @@
+# China gaokao profiles, 新高考 3+1+2 (spec §3.4). Same ids/orientation/level as majors_us.yaml.
+# Score levels are matched by RELATIVE STANDING. Totals and provincial ranks MUST come from a
+# real 一分一段表 of the chosen province (separate tables for 物理类 and 历史类).
+# Until filled, rendering in strict mode refuses (see QUESTIONS.md).
+country: cn
+province: TODO            # researcher chooses one 3+1+2 province, e.g. 广东 or 湖北
+year: TODO                # gaokao year of the 一分一段表
+school: 一所公立高中
+anchors:                  # total score (750 scale) and provincial rank within the track
+  physics:                # 首选物理 (science + balanced orientations)
+    high: {total: TODO, rank: TODO, percentile: 0.02}
+    mid:  {total: TODO, rank: TODO, percentile: 0.30}
+  history:                # 首选历史 (humanities orientation)
+    high: {total: TODO, rank: TODO, percentile: 0.02}
+    mid:  {total: TODO, rank: TODO, percentile: 0.30}
+  source: TODO            # citation / URL of the 一分一段表
+orientations:
+  science:
+    first: 物理
+    second: [化学, 生物]
+    track: physics
+  humanities:
+    first: 历史
+    second: [政治, 地理]
+    track: history
+  balanced:
+    first: 物理
+    second: [政治, 地理]
+    track: physics
+# Relative subject strength (share of each subject's max score) used to split the anchor
+# total into single-subject scores deterministically (materials.render.allocate_cn_scores).
+# Replicate 2 uses `weights_r2`. Design choice, not data.
+subject_weights:
+  science:    {r1: {语文: 0.80, 数学: 0.94, 外语: 0.84, 首选: 0.93, 再选1: 0.88, 再选2: 0.87},
+               r2: {语文: 0.81, 数学: 0.93, 外语: 0.85, 首选: 0.92, 再选1: 0.87, 再选2: 0.88}}
+  humanities: {r1: {语文: 0.92, 数学: 0.80, 外语: 0.86, 首选: 0.93, 再选1: 0.88, 再选2: 0.87},
+               r2: {语文: 0.93, 数学: 0.81, 外语: 0.85, 首选: 0.92, 再选1: 0.87, 再选2: 0.88}}
+  balanced:   {r1: {语文: 0.87, 数学: 0.87, 外语: 0.87, 首选: 0.87, 再选1: 0.87, 再选2: 0.87},
+               r2: {语文: 0.86, 数学: 0.88, 外语: 0.87, 首选: 0.88, 再选1: 0.86, 再选2: 0.87}}
+profiles:
+  - {id: maj_sci_high_r1, orientation: science,    level: high, replicate: 1, activity: "学校数学竞赛队"}
+  - {id: maj_sci_high_r2, orientation: science,    level: high, replicate: 2, activity: "学校科技创新社团"}
+  - {id: maj_sci_mid_r1,  orientation: science,    level: mid,  replicate: 1, activity: "学校数学竞赛队"}
+  - {id: maj_sci_mid_r2,  orientation: science,    level: mid,  replicate: 2, activity: "学校科技创新社团"}
+  - {id: maj_hum_high_r1, orientation: humanities, level: high, replicate: 1, activity: "学校辩论队"}
+  - {id: maj_hum_high_r2, orientation: humanities, level: high, replicate: 2, activity: "学校历史社团"}
+  - {id: maj_hum_mid_r1,  orientation: humanities, level: mid,  replicate: 1, activity: "学校辩论队"}
+  - {id: maj_hum_mid_r2,  orientation: humanities, level: mid,  replicate: 2, activity: "学校历史社团"}
+  - {id: maj_bal_high_r1, orientation: balanced,   level: high, replicate: 1, activity: "学生会"}
+  - {id: maj_bal_high_r2, orientation: balanced,   level: high, replicate: 2, activity: "模拟联合国社团"}
+  - {id: maj_bal_mid_r1,  orientation: balanced,   level: mid,  replicate: 1, activity: "学生会"}
+  - {id: maj_bal_mid_r2,  orientation: balanced,   level: mid,  replicate: 2, activity: "模拟联合国社团"}

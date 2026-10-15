@@ -1,0 +1,31 @@
+# US high-school senior profiles (spec §3.4). 3 orientations x 2 levels x 2 replicates.
+# Replicates share relative standing (GPA, SAT total) and differ only in the SAT section
+# split and the extracurricular activity. School type is held constant.
+country: us
+school: a public high school
+levels:
+  high: {gpa: 3.9, sat_total: 1500, ap_result: "a 5 on each exam", standing: "top 2%"}
+  mid:  {gpa: 3.4, sat_total: 1250, ap_result: "4s and 3s", standing: "top 30%"}
+orientations:
+  science:
+    ap: [AP Calculus BC, AP Physics C, AP Chemistry]
+    strongest: [math, physics]
+  humanities:
+    ap: [AP US History, AP English Literature, AP Psychology]
+    strongest: [English, history]
+  balanced:
+    ap: [AP Calculus AB, AP Biology, AP US History]
+    strongest: []
+profiles:
+  - {id: maj_sci_high_r1, orientation: science,    level: high, replicate: 1, sat: {math: 790, ebrw: 710}, activity: "the math competition team"}
+  - {id: maj_sci_high_r2, orientation: science,    level: high, replicate: 2, sat: {math: 780, ebrw: 720}, activity: "the Science Olympiad team"}
+  - {id: maj_sci_mid_r1,  orientation: science,    level: mid,  replicate: 1, sat: {math: 680, ebrw: 570}, activity: "the math competition team"}
+  - {id: maj_sci_mid_r2,  orientation: science,    level: mid,  replicate: 2, sat: {math: 670, ebrw: 580}, activity: "the Science Olympiad team"}
+  - {id: maj_hum_high_r1, orientation: humanities, level: high, replicate: 1, sat: {math: 710, ebrw: 790}, activity: "the debate team"}
+  - {id: maj_hum_high_r2, orientation: humanities, level: high, replicate: 2, sat: {math: 720, ebrw: 780}, activity: "the school history club"}
+  - {id: maj_hum_mid_r1,  orientation: humanities, level: mid,  replicate: 1, sat: {math: 570, ebrw: 680}, activity: "the debate team"}
+  - {id: maj_hum_mid_r2,  orientation: humanities, level: mid,  replicate: 2, sat: {math: 580, ebrw: 670}, activity: "the school history club"}
+  - {id: maj_bal_high_r1, orientation: balanced,   level: high, replicate: 1, sat: {math: 750, ebrw: 750}, activity: "the student council"}
+  - {id: maj_bal_high_r2, orientation: balanced,   level: high, replicate: 2, sat: {math: 760, ebrw: 740}, activity: "Model United Nations"}
+  - {id: maj_bal_mid_r1,  orientation: balanced,   level: mid,  replicate: 1, sat: {math: 620, ebrw: 630}, activity: "the student council"}
+  - {id: maj_bal_mid_r2,  orientation: balanced,   level: mid,  replicate: 2, sat: {math: 630, ebrw: 620}, activity: "Model United Nations"}

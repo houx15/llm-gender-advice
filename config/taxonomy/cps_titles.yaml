@@ -1,0 +1,111 @@
+# Job taxonomy id -> exact BLS CPS Table 11 row title(s) (employed persons by detailed
+# occupation and sex, 2025 annual averages). Several titles -> employment-weighted mean.
+# Checked against data/reference/raw/cpsaat11.html; unmatched titles go to QUESTIONS.md.
+software_developer:
+  - "Software developers"
+data_scientist:   # CPS 2025 has no separate data-scientist row; nearest row (flagged in QUESTIONS.md)
+  - "Other mathematical science occupations"
+information_security_analyst:
+  - "Information security analysts"
+computer_systems_analyst:
+  - "Computer systems analysts"
+web_developer:
+  - "Web developers"
+software_qa_tester:
+  - "Software quality assurance analysts and testers"
+it_support_specialist:
+  - "Computer support specialists"
+it_manager:
+  - "Computer and information systems managers"
+mechanical_engineer:
+  - "Mechanical engineers"
+electrical_engineer:
+  - "Electrical and electronics engineers"
+civil_engineer:
+  - "Civil engineers"
+engineering_technician:
+  - "Other engineering technologists and technicians, except drafters"
+drafter:
+  - "Architectural and civil drafters"
+  - "Other drafters"
+engineering_manager:
+  - "Architectural and engineering managers"
+physician:
+  - "Other physicians"
+  - "Emergency medicine physicians"
+dentist:
+  - "Dentists"
+pharmacist:
+  - "Pharmacists"
+registered_nurse:
+  - "Registered nurses"
+nursing_assistant:
+  - "Nursing assistants"
+medical_lab_technologist:
+  - "Clinical laboratory technologists and technicians"
+physical_therapist:
+  - "Physical therapists"
+medical_assistant:
+  - "Medical assistants"
+health_services_manager:
+  - "Medical and health services managers"
+medical_scientist:
+  - "Medical scientists"
+biological_scientist:
+  - "Biological scientists"
+biological_technician:
+  - "Biological technicians"
+financial_analyst:
+  - "Financial and investment analysts"
+investment_banker:
+  - "Securities, commodities, and financial services sales agents"
+accountant:
+  - "Accountants and auditors"
+bookkeeping_clerk:
+  - "Bookkeeping, accounting, and auditing clerks"
+management_consultant:
+  - "Management analysts"
+market_research_analyst:
+  - "Market research analysts and marketing specialists"
+marketing_manager:
+  - "Marketing managers"
+public_relations_specialist:
+  - "Public relations specialists"
+hr_specialist:
+  - "Human resources workers"
+administrative_assistant:
+  - "Secretaries and administrative assistants, except legal, medical, and executive"
+sales_representative:
+  - "Sales representatives, wholesale and manufacturing"
+lawyer:
+  - "Lawyers"
+paralegal:
+  - "Paralegals and legal assistants"
+postsecondary_teacher:
+  - "Postsecondary teachers"
+secondary_teacher:
+  - "Secondary school teachers"
+elementary_teacher:
+  - "Elementary and middle school teachers"
+preschool_teacher:
+  - "Preschool and kindergarten teachers"
+school_counselor:
+  - "Educational, guidance, and career counselors and advisors"
+education_administrator:
+  - "Education and childcare administrators"
+psychologist:
+  - "Clinical and counseling psychologists"
+  - "School psychologists"
+  - "Other psychologists"
+mental_health_counselor:
+  - "Mental health counselors"
+social_worker:
+  - "Child, family, and school social workers"
+  - "Healthcare social workers"
+  - "Mental health and substance abuse social workers"
+journalist:
+  - "News analysts, reporters, and journalists"
+editor:
+  - "Editors"
+technical_writer:
+  - "Technical writers"

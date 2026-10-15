@@ -1,0 +1,25 @@
+# Shared cluster paths and Slurm settings (Part B). Edit for your cluster.
+cluster:
+  repo_dir: TODO                 # absolute path of this repo on shared storage
+  hf_home: TODO                  # shared Hugging Face cache, e.g. /shared/<you>/hf_cache
+  env_dir: TODO                  # shared Python env created by scripts/online/setup_env.sh
+  outputs_dir: outputs           # relative to repo_dir unless absolute
+  # hostname regexes used by guards (cache_models.py refuses to run on compute nodes)
+  login_hostname_pattern: "^login"
+  compute_hostname_pattern: "^(gpu|node|cn)\\d*"
+  modules: []                    # e.g. ["cuda/12.4"]; loaded by scripts/slurm/common.sh
+slurm:
+  partition: TODO
+  account: TODO
+  gpus: 1
+  cpus_per_task: 8
+  mem: 120G
+  time:
+    behavior: "08:00:00"
+    extract: "06:00:00"
+    probes: "04:00:00"
+    patching: "12:00:00"
+    steering: "12:00:00"
+    erasure: "12:00:00"
+# CFPS benchmark (spec §7): disabled until set. Never copied into the repo.
+cfps_dir: null

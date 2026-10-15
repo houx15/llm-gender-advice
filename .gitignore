@@ -1,0 +1,38 @@
+# === SECRETS — never commit ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# === License-restricted data (CFPS) — never commit ===
+data/cfps/
+**/cfps_raw/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.python-version
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# === Data / outputs (git-ignored except small configs) ===
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+wheelhouse/
+
+# === OS / editor ===
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.log

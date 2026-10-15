@@ -1,0 +1,52 @@
+id,label_en,label_zh,soc_codes,field,track,stem
+software_developer,Software Developer,软件开发工程师,15-1252,computing,science,1
+data_scientist,Data Scientist,数据科学家,15-2051,computing,science,1
+information_security_analyst,Information Security Analyst,网络安全工程师,15-1212,computing,science,1
+computer_systems_analyst,Computer Systems Analyst,系统分析师,15-1211,computing,science,1
+web_developer,Web Developer,前端开发工程师,15-1254,computing,science,1
+software_qa_tester,Software Quality Assurance Tester,软件测试工程师,15-1253,computing,science,1
+it_support_specialist,IT Support Specialist,IT技术支持,15-1232,computing,either,1
+it_manager,IT Manager,IT经理,11-3021,computing,either,1
+mechanical_engineer,Mechanical Engineer,机械工程师,17-2141,engineering,science,1
+electrical_engineer,Electrical Engineer,电气工程师,17-2071,engineering,science,1
+civil_engineer,Civil Engineer,土木工程师,17-2051,engineering,science,1
+engineering_technician,Engineering Technician,机械技术员,17-3027,engineering,science,1
+drafter,Drafter (CAD Technician),制图员,17-3013,engineering,science,1
+engineering_manager,Engineering Manager,工程经理,11-9041,engineering,science,1
+physician,Physician,医生,29-1215;29-1216;29-1229,healthcare,science,1
+dentist,Dentist,牙医,29-1021,healthcare,science,1
+pharmacist,Pharmacist,药剂师,29-1051,healthcare,science,1
+registered_nurse,Registered Nurse,护士,29-1141,healthcare,either,1
+nursing_assistant,Nursing Assistant,护理员,31-1131,healthcare,either,0
+medical_lab_technologist,Medical Laboratory Technologist,医学检验师,29-2011;29-2012;29-2010,healthcare,science,1
+physical_therapist,Physical Therapist,康复治疗师,29-1123,healthcare,either,1
+medical_assistant,Medical Assistant,医疗助理,31-9092,healthcare,either,0
+health_services_manager,Health Services Manager,医院管理人员,11-9111,healthcare,either,0
+medical_scientist,Medical Scientist,医学研究员,19-1042,science,science,1
+biological_scientist,Biologist,生物学研究员,19-1029,science,science,1
+biological_technician,Laboratory Technician,实验室技术员,19-4021,science,science,1
+financial_analyst,Financial Analyst,金融分析师,13-2051,business_finance,either,0
+investment_banker,Investment Banker / Securities Sales Agent,投资银行从业者,41-3031,business_finance,either,0
+accountant,Accountant,会计师,13-2011,business_finance,either,0
+bookkeeping_clerk,Bookkeeping Clerk,出纳/记账员,43-3031,business_finance,either,0
+management_consultant,Management Consultant,管理咨询顾问,13-1111,business_finance,either,0
+market_research_analyst,Market Research Analyst,市场研究分析师,13-1161,business_finance,either,0
+marketing_manager,Marketing Manager,市场经理,11-2021,business_finance,either,0
+public_relations_specialist,Public Relations Specialist,公关专员,27-3031,business_finance,either,0
+hr_specialist,Human Resources Specialist,人力资源专员,13-1071,business_finance,either,0
+administrative_assistant,Administrative Assistant,行政助理,43-6014,business_finance,either,0
+sales_representative,Sales Representative,销售代表,41-4012,business_finance,either,0
+lawyer,Lawyer,律师,23-1011,law,either,0
+paralegal,Paralegal,律师助理,23-2011,law,either,0
+postsecondary_teacher,University Professor,大学教师,25-1099;25-1042;25-1066,education,either,0
+secondary_teacher,High School Teacher,中学教师,25-2031,education,either,0
+elementary_teacher,Elementary School Teacher,小学教师,25-2021,education,either,0
+preschool_teacher,Preschool Teacher,幼儿园教师,25-2011,education,either,0
+school_counselor,School Counselor,学校心理咨询师,21-1012,education,either,0
+education_administrator,School Principal / Education Administrator,学校管理人员,11-9032;11-9033,education,either,0
+psychologist,Psychologist,心理学家,19-3033;19-3039,social_science,either,1
+mental_health_counselor,Mental Health Counselor,心理咨询师,21-1018;21-1014,social_science,either,0
+social_worker,Social Worker,社会工作者,21-1021;21-1022,social_science,humanities,0
+journalist,Journalist / Reporter,记者,27-3023,media,humanities,0
+editor,Editor,编辑,27-3041,media,humanities,0
+technical_writer,Technical Writer,技术文档工程师,27-3042,media,either,0

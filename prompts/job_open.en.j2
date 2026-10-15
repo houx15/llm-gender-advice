@@ -1,0 +1,9 @@
+{% if intro %}{{ intro }} {% endif %}{{ profile }}
+
+{% if paraphrase_id == 0 -%}
+Which jobs should I consider? Give your top five, ranked, with one sentence each.
+{%- elif paraphrase_id == 1 -%}
+I'm starting my job search. What five jobs would you recommend for me, in ranked order? Please give one sentence of explanation for each.
+{%- else -%}
+Could you help me figure out what job to look for? Please list the five jobs that fit me best, ranked from first to fifth, with a one-sentence reason for each.
+{%- endif %}

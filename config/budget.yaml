@@ -1,0 +1,14 @@
+# Part A budget (spec §5). Enforced in code by advice_audit.api.budget.
+# Effective limit for any phase = min(phase cap - phase spent, total cap - reserve - total spent).
+# The reserve is never spent without --allow-reserve.
+total_cap_usd: 60.00
+reserve_usd: 6.00
+phase_caps:
+  materials: 1.00     # name manipulation check (all API models; tiny prompts)
+  pilot: 3.00
+  main: 45.00
+  coding: 12.00
+assume_peak_pricing: true       # estimates use peak price where a model has one
+estimate_safety_factor: 1.15    # multiplier on estimated output tokens
+kill_switch:
+  overrun_fraction: 0.20        # stop a run if actual spend > estimate * 1.20

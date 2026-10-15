@@ -1,0 +1,14 @@
+# DeepSeek-only pilot (spec §4.1): 4 profiles per domain, both modes, all conditions and
+# cells, 5 samples -> 1,200 calls. STOP for researcher review afterwards (spec §10, A3).
+name: pilot
+phase: pilot
+prompt_version: v1
+models: [deepseek_v41_flash]
+domains: [majors, jobs]
+modes: [open, fixed]
+profiles:
+  majors: [maj_sci_high_r1, maj_hum_mid_r1, maj_bal_high_r1, maj_bal_mid_r2]
+  jobs:   [job_cs_high, job_econ_mid, job_bio_high, job_psy_mid]
+cells: [A, B, C]
+gender_conds: [f_implicit, f_explicit, m_implicit, m_explicit, baseline]
+samples: 5

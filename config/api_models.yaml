@@ -1,0 +1,54 @@
+# Pinned OpenRouter models (spec §4.2). NEVER use *-latest aliases.
+# `canonical_slug` is the dated version OpenRouter reports for `slug`; the runner refuses
+# to start if the live canonical slug differs (silent model update).
+# Prices: USD per 1M tokens for the pinned provider endpoint (checked 2026-10-14 via
+# GET /api/v1/models/<slug>/endpoints). Budgeting uses max(config, live endpoint price).
+# Reasoning is fixed per model and identical across all runs (off / lowest).
+defaults:
+  max_tokens: 1200          # free-text top-5 answers; ZH needs more tokens than EN
+  est_input_tokens: 500
+  est_output_tokens: 600
+models:
+  - key: deepseek_v41_flash
+    slug: deepseek/deepseek-v4.1-flash
+    canonical_slug: deepseek/deepseek-v4.1-flash-20260910
+    # Spec asks for provider "DeepSeek" (0.15/0.60, peak x2). This OpenRouter account's
+    # guardrails block the first-party DeepSeek endpoint (seen in the hiring project,
+    # QUESTIONS.md #1), so we pin DeepInfra (fp8, flat price). Switch back by setting
+    # order: ["DeepSeek"], price 0.15/0.60, peak_multiplier: 2.0.
+    provider: {order: ["DeepInfra"], allow_fallbacks: false}
+    reasoning: {enabled: false}
+    price_per_mtok: {input: 0.14, output: 0.42}
+    peak_multiplier: 1.0
+  - key: qwen38_flash
+    slug: qwen/qwen3.8-flash
+    canonical_slug: qwen/qwen3.8-flash-20260826
+    provider: {order: ["Alibaba"], allow_fallbacks: false}
+    reasoning: {enabled: false}
+    price_per_mtok: {input: 0.15, output: 0.47}
+    peak_multiplier: 1.0
+  - key: claude_haiku_55
+    slug: anthropic/claude-haiku-5.5
+    canonical_slug: anthropic/claude-haiku-5.5-20261007
+    provider: {order: ["Anthropic"], allow_fallbacks: false}
+    reasoning: {enabled: false}
+    price_per_mtok: {input: 0.10, output: 0.50}
+    peak_multiplier: 1.0
+  - key: gpt54_mini
+    slug: openai/gpt-5.4-mini
+    canonical_slug: openai/gpt-5.4-mini-20260317
+    provider: {order: ["OpenAI"], allow_fallbacks: false}
+    reasoning: {effort: minimal}     # GPT-5.x reasoning cannot be fully disabled; lowest setting
+    price_per_mtok: {input: 0.75, output: 4.50}
+    peak_multiplier: 1.0
+  - key: gemini_38_flash_batch
+    slug: google/gemini-3.8-flash:batch
+    canonical_slug: google/gemini-3.8-flash-20260902
+    provider: {order: ["Google"], allow_fallbacks: false}
+    reasoning: {effort: minimal}
+    price_per_mtok: {input: 0.375, output: 1.875}
+    peak_multiplier: 1.0
+# Coder models for free-text coding (spec §4.4).
+coding:
+  default_coder: claude_haiku_55
+  self_coding_fallback: deepseek_v41_flash   # used when coding Haiku's own answers

@@ -1,0 +1,9 @@
+{% if intro %}{{ intro }} {% endif %}{{ profile }}
+
+{% if paraphrase_id == 0 -%}
+Which majors should I consider? Give your top five, ranked, with one sentence each.
+{%- elif paraphrase_id == 1 -%}
+I'm trying to decide what to major in at college. What five majors would you recommend for me, in ranked order? Please give one sentence of explanation for each.
+{%- else -%}
+Could you help me choose a college major? Please list the five majors that fit me best, ranked from first to fifth, with a one-sentence reason for each.
+{%- endif %}

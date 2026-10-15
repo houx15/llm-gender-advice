@@ -1,0 +1,50 @@
+# US new-graduate profiles (spec §3.4). 6 majors x 2 performance levels. No family information.
+country: us
+university: a state flagship university
+levels:
+  high: {gpa: 3.8, rank: "top 10% of my class"}
+  mid:  {gpa: 3.2, rank: "middle of my class"}
+majors:
+  computer_science:
+    orientation: science   # academic track used for off_track_share
+    label: computer science
+    internship: "a summer software engineering internship at a mid-sized tech company"
+    skills: [Python, Java, SQL, data structures and algorithms, Git]
+  mechanical_engineering:
+    orientation: science   # academic track used for off_track_share
+    label: mechanical engineering
+    internship: "a summer internship with the product design team of a manufacturing company"
+    skills: [SolidWorks, MATLAB, finite element analysis, prototyping, technical drawing]
+  economics:
+    orientation: balanced   # academic track used for off_track_share
+    label: economics
+    internship: "a summer internship in the research department of a regional bank"
+    skills: [Excel, Stata, econometrics, financial modeling, report writing]
+  biology:
+    orientation: science   # academic track used for off_track_share
+    label: biology
+    internship: "a research assistant internship in a university molecular biology lab"
+    skills: [PCR, cell culture, R, lab safety procedures, scientific writing]
+  psychology:
+    orientation: balanced   # academic track used for off_track_share
+    label: psychology
+    internship: "a research internship in a university psychology lab"
+    skills: [SPSS, survey design, experimental design, statistics, academic writing]
+  journalism:
+    orientation: humanities   # academic track used for off_track_share
+    label: journalism
+    internship: "a summer internship at a city newspaper"
+    skills: [news writing, interviewing, editing, Adobe Premiere, social media analytics]
+profiles:
+  - {id: job_cs_high,   major: computer_science,       level: high}
+  - {id: job_cs_mid,    major: computer_science,       level: mid}
+  - {id: job_me_high,   major: mechanical_engineering, level: high}
+  - {id: job_me_mid,    major: mechanical_engineering, level: mid}
+  - {id: job_econ_high, major: economics,              level: high}
+  - {id: job_econ_mid,  major: economics,              level: mid}
+  - {id: job_bio_high,  major: biology,                level: high}
+  - {id: job_bio_mid,   major: biology,                level: mid}
+  - {id: job_psy_high,  major: psychology,             level: high}
+  - {id: job_psy_mid,   major: psychology,             level: mid}
+  - {id: job_jour_high, major: journalism,             level: high}
+  - {id: job_jour_mid,  major: journalism,             level: mid}

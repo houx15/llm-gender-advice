@@ -1,0 +1,13 @@
+# Study 1 main run (spec §4.1): 12 profiles x 5 conditions x 3 cells x 10 samples per
+# (domain x mode) -> 7,200 calls per model. Requires "APPROVED: A4" in QUESTIONS.md.
+name: study1_main
+phase: main
+prompt_version: v1
+requires_approval: A4
+models: [deepseek_v41_flash, qwen38_flash, claude_haiku_55, gpt54_mini, gemini_38_flash_batch]
+domains: [majors, jobs]
+modes: [open, fixed]
+profiles: {majors: all, jobs: all}
+cells: [A, B, C]
+gender_conds: [f_implicit, f_explicit, m_implicit, m_explicit, baseline]
+samples: 10

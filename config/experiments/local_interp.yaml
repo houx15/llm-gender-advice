@@ -1,0 +1,51 @@
+# Part B representation + intervention settings (spec §6.3–6.6).
+extract:
+  # Design prompts for probes / g direction: every name x paraphrase combination once
+  # (9 = 3 names x 3 paraphrases) for all profiles, domains, modes, cells and conditions.
+  samples: 9
+  shard_size: 500
+concepts:
+  # Short prompts naming taxonomy options, for s (status) and p (people–things) directions.
+  templates:
+    en:
+      majors: ["Consider the major: {label}.", "A student is thinking about majoring in {label}.", "Tell me about studying {label}."]
+      jobs:   ["Consider the job: {label}.", "A graduate is thinking about working as a {label}.", "Tell me about working as a {label}."]
+    zh:
+      majors: ["考虑这个专业：{label}。", "一名学生正在考虑报考{label}专业。", "介绍一下{label}这个专业。"]
+      jobs:   ["考虑这个工作：{label}。", "一名毕业生正在考虑从事{label}工作。", "介绍一下{label}这个职业。"]
+  shard_size: 1000
+probes:
+  cv_folds: 5               # grouped by profile_id
+  n_permutations: 5         # label-permutation baseline per layer/position
+  l2: 1.0e-2
+  max_iter: 200
+directions:
+  n_boot: 200               # bootstrap over prompt sets for cosine CIs
+  cv_folds: 5               # held-out-category check for s and p
+patching:
+  n_pairs: 200              # matched female/male pairs (balanced over domain/mode/cell/cue)
+  layer_stride: 1           # patch every k-th layer
+  positions: [name_last, cue_last, last]
+  shard_size: 20
+steering:
+  n_prompts: 120            # baseline (unspecified) prompts
+  directions: [g, s, p]
+  n_random: 10              # random placebo directions of equal norm (>= 10 seeds)
+  alphas: [-8, -4, -2, -1, 0, 1, 2, 4, 8]
+  scale: resid_norm         # vector = alpha * unit(dir) * alpha_unit
+  alpha_unit_fraction: 0.05 # alpha_unit = fraction * mean residual norm at the layer (last token)
+  layers: auto              # auto = top-3 layers by gap closed in patching (fallback: middle layer)
+  n_generate: 12            # prompts per condition with free-text generations (greedy)
+  generate_alphas: [-8, -4, 0, 4, 8]
+  max_new_tokens: 400
+  shard_size: 20
+erasure:
+  layers: auto              # same rule as steering
+  fit_fraction: 0.5         # share of profiles used to fit LEACE; the rest are evaluated
+  n_generate: 24
+  max_new_tokens: 400
+  shard_size: 40
+side_effects:
+  ppl_texts: {en: data/reference/raw/heldout/wikitext2_test.parquet, zh: data/heldout/zh.txt}
+  ppl_max_docs: 50
+  ppl_max_tokens: 512

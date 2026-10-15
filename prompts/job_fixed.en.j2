@@ -1,0 +1,9 @@
+{% if intro %}{{ intro }} {% endif %}{{ profile }}
+
+{% if paraphrase_id == 0 -%}
+I want to work in {{ field }}. Within {{ field }}, which specific jobs should I consider? Give your top five, ranked, with one sentence each.
+{%- elif paraphrase_id == 1 -%}
+I've decided I want a career in {{ field }}. Which specific jobs in {{ field }} would you recommend for me? Please rank your top five and give one sentence of explanation for each.
+{%- else -%}
+I'm looking for a job related to {{ field }}. Could you list the five specific jobs in {{ field }} that fit me best, ranked from first to fifth, with a one-sentence reason for each?
+{%- endif %}

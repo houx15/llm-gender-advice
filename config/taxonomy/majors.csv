@@ -1,0 +1,51 @@
+id,label_en,label_zh,cip_codes,field,track,stem
+computer_science,Computer Science,计算机科学与技术,11.0701,computing,science,1
+software_engineering,Software Engineering,软件工程,14.0903,computing,science,1
+data_science,Data Science,数据科学与大数据技术,30.7001,computing,science,1
+information_systems,Information Systems,信息管理与信息系统,11.0401;52.1201,computing,either,1
+electrical_engineering,Electrical and Electronic Engineering,电子信息工程,14.1001,engineering,science,1
+mechanical_engineering,Mechanical Engineering,机械工程,14.1901,engineering,science,1
+civil_engineering,Civil Engineering,土木工程,14.0801,engineering,science,1
+chemical_engineering,Chemical Engineering,化学工程与工艺,14.0701,engineering,science,1
+aerospace_engineering,Aerospace Engineering,航空航天工程,14.0201,engineering,science,1
+biomedical_engineering,Biomedical Engineering,生物医学工程,14.0501,engineering,science,1
+architecture,Architecture,建筑学,04.0201,engineering,science,1
+mathematics,Mathematics,数学与应用数学,27.0101,science,science,1
+statistics,Statistics,统计学,27.0501,science,either,1
+physics,Physics,物理学,40.0801,science,science,1
+chemistry,Chemistry,化学,40.0501,science,science,1
+biology,Biology,生物科学,26.0101,science,science,1
+environmental_science,Environmental Science,环境科学,03.0104,science,either,1
+clinical_medicine,Medicine (pre-med / clinical medicine),临床医学,51.1201;26.0102,healthcare,science,1
+dentistry,Dentistry,口腔医学,51.0401,healthcare,science,1
+pharmacy,Pharmacy,药学,51.2001,healthcare,science,1
+nursing,Nursing,护理学,51.3801,healthcare,either,1
+medical_lab_science,Medical Laboratory Science,医学检验技术,51.1005,healthcare,science,1
+public_health,Public Health,预防医学与公共卫生,51.2201,healthcare,either,1
+rehabilitation_therapy,Physical Therapy and Rehabilitation,康复治疗学,51.2308,healthcare,either,1
+health_administration,Health Services Administration,健康服务与管理,51.0701,healthcare,either,0
+economics,Economics,经济学,45.0601,business_finance,either,0
+finance,Finance,金融学,52.0801,business_finance,either,0
+accounting,Accounting,会计学,52.0301,business_finance,either,0
+business_administration,Business Administration,工商管理,52.0201,business_finance,either,0
+marketing,Marketing,市场营销,52.1401,business_finance,either,0
+human_resources,Human Resources Management,人力资源管理,52.1001,business_finance,either,0
+hospitality_tourism,Hospitality and Tourism Management,旅游管理,52.0901,business_finance,either,0
+law,Law (pre-law / legal studies),法学,22.0001;22.0101,law,either,0
+paralegal_studies,Paralegal Studies,法律事务,22.0302,law,either,0
+criminal_justice,Criminal Justice,侦查学,43.0104,law,either,0
+political_science,Political Science,政治学与行政学,45.1001,law,humanities,0
+education,Education,教育学,13.0101,education,either,0
+early_childhood_education,Early Childhood Education,学前教育,13.1210,education,either,0
+elementary_education,Elementary Education,小学教育,13.1202,education,either,0
+special_education,Special Education,特殊教育,13.1001,education,either,0
+psychology,Psychology,心理学,42.0101,social_science,either,1
+sociology,Sociology,社会学,45.1101,social_science,humanities,0
+social_work,Social Work,社会工作,44.0701,social_science,humanities,0
+literature,Literature and Language,汉语言文学,23.0101;16.0301,humanities,humanities,0
+foreign_languages,Foreign Languages,外国语言文学,16.0101,humanities,humanities,0
+history,History,历史学,54.0101,humanities,humanities,0
+philosophy,Philosophy,哲学,38.0101,humanities,humanities,0
+journalism,Journalism,新闻学,09.0401,humanities,humanities,0
+communications,Communication and Media Studies,传播学,09.0102,humanities,humanities,0
+design,Design and Visual Arts,设计学,50.0401,arts,either,0

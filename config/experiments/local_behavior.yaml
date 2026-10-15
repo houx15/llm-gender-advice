@@ -1,0 +1,13 @@
+# Step 0 reduced protocol for local open-weight models (spec §6.3): all profiles,
+# both domains and modes, all conditions and cells, 3 samples -> 2,160 prompts per model.
+# Same templates and chat formatting as Part A; output uses the Part A log schema.
+name: local_behavior
+phase: local
+prompt_version: v1
+models: []            # local model keys come from --model
+domains: [majors, jobs]
+modes: [open, fixed]
+profiles: {majors: all, jobs: all}
+cells: [A, B, C]
+gender_conds: [f_implicit, f_explicit, m_implicit, m_explicit, baseline]
+samples: 3
